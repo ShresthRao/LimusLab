@@ -13,8 +13,6 @@ It features multiple attribute systems and a level up system at the end of each 
  
 Certain attributes are strong against certain monsters and weak against others.
  
-Killed monsters drop loot and health that can be absorbed, adding to the health bar and items going into the inventory (accessible after all monsters cleared from a room).
+Killed monsters drop loot and health that can be absorbed, adding to the health bar while the items go into the inventory (accessible after all monsters cleared from a room), later used to configure your 'build' or stats.
 
 <img width="638" height="361" alt="image" src="https://github.com/user-attachments/assets/3f870728-d375-4ba8-9c29-631ead61f0ba" />
-
-
