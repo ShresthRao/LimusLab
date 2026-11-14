@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/fx/super_burst_0.png" id="1_2sjsa"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_burst_1.png" id="2_6rmjg"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_burst_2.png" id="3_isy0l"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_burst_3.png" id="4_38qn2"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_burst_4.png" id="5_gx3lj"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_burst_5.png" id="6_2iehr"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2sjsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6rmjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_isy0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_38qn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gx3lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2iehr")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]

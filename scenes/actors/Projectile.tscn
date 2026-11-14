@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_vyukb"]
+[ext_resource type="Texture2D" path="res://assets/fx/bubble_0.png" id="2_xdfak"]
+[ext_resource type="Texture2D" path="res://assets/fx/spark.png" id="3_5eux7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1fyuc"]
+radius = 8.0
+
+[node name="Projectile" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_vyukb")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_xdfak")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1fyuc")
+
+[node name="Trail" type="CPUParticles2D" parent="."]
+show_behind_parent = true
+amount = 10
+lifetime = 0.3
+texture = ExtResource("3_5eux7")
+gravity = Vector2(0, 0)
+initial_velocity_max = 10.0
+scale_amount_min = 0.3
+scale_amount_max = 0.6
+color = Color(1, 1, 1, 0.6)

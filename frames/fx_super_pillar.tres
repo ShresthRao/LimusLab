@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/fx/super_pillar_0.png" id="1_uthri"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_pillar_1.png" id="2_bipoj"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_pillar_2.png" id="3_3fiys"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_pillar_3.png" id="4_ncdvm"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_pillar_4.png" id="5_x0dyi"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_pillar_5.png" id="6_r2qu8"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uthri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bipoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3fiys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ncdvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x0dyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r2qu8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}]

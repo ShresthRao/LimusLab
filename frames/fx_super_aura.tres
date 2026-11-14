@@ -1,0 +1,26 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/fx/super_aura_0.png" id="1_e0cxl"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_aura_1.png" id="2_gi5qm"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_aura_2.png" id="3_tyh0s"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_aura_3.png" id="4_4t357"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e0cxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gi5qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tyh0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4t357")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]

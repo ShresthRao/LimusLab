@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/super_aura.gd" id="1_d7jfp"]
+[ext_resource type="SpriteFrames" path="res://frames/fx_super_aura.tres" id="2_xkktt"]
+[ext_resource type="Texture2D" path="res://assets/fx/fire_spark.png" id="3_gecyn"]
+
+[node name="SuperAura" type="Node2D"]
+script = ExtResource("1_d7jfp")
+
+[node name="Wheel" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.55)
+position = Vector2(0, -4)
+scale = Vector2(3.6, 3.6)
+sprite_frames = ExtResource("2_xkktt")
+
+[node name="Embers" type="CPUParticles2D" parent="."]
+position = Vector2(0, 8)
+amount = 16
+lifetime = 0.9
+texture = ExtResource("3_gecyn")
+emission_shape = 3
+emission_rect_extents = Vector2(18, 4)
+direction = Vector2(0, -1)
+spread = 15.0
+gravity = Vector2(0, -40)
+initial_velocity_min = 30.0
+initial_velocity_max = 70.0
+scale_amount_min = 0.4
+scale_amount_max = 0.8
+color = Color(1, 1, 1, 0.9)

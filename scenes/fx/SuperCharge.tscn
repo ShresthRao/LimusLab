@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/super_charge.gd" id="1_di65k"]
+[ext_resource type="SpriteFrames" path="res://frames/fx_super_ring.tres" id="2_220th"]
+[ext_resource type="SpriteFrames" path="res://frames/fx_super_pillar.tres" id="3_iyo4f"]
+[ext_resource type="Texture2D" path="res://assets/fx/fire_spark.png" id="4_o3gjk"]
+
+[node name="SuperCharge" type="Node2D"]
+script = ExtResource("1_di65k")
+
+[node name="Rings" type="AnimatedSprite2D" parent="."]
+modulate = Color(1.4, 1.2, 1, 1)
+position = Vector2(0, -4)
+scale = Vector2(7, 7)
+sprite_frames = ExtResource("2_220th")
+
+[node name="Pillar" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -50)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("3_iyo4f")
+
+[node name="Sparks" type="CPUParticles2D" parent="."]
+amount = 30
+lifetime = 0.6
+texture = ExtResource("4_o3gjk")
+emission_shape = 1
+emission_sphere_radius = 90.0
+gravity = Vector2(0, 0)
+radial_accel_min = -380.0
+radial_accel_max = -260.0
+scale_amount_min = 0.5

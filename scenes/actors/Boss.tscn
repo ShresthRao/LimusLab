@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/boss.gd" id="1_m2e5f"]
+[ext_resource type="SpriteFrames" path="res://frames/big_demon.tres" id="2_uends"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3ijo"]
+resource_local_to_scene = true
+size = Vector2(52, 62)
+
+[node name="Boss" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_m2e5f")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("2_uends")
+animation = &"run"
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u3ijo")

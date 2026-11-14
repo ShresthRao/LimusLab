@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/hazard.gd" id="1_fahd5"]
+[ext_resource type="Texture2D" path="res://assets/fx/spark.png" id="2_216hv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtyan"]
+resource_local_to_scene = true
+size = Vector2(128, 64)
+
+[node name="AcidPool" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_fahd5")
+size_px = Vector2(128, 64)
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vtyan")
+
+[node name="Bubbles" type="CPUParticles2D" parent="."]
+position = Vector2(0, -28)
+amount = 4
+lifetime = 1.2
+texture = ExtResource("2_216hv")
+emission_shape = 3
+emission_rect_extents = Vector2(64, 4)
+direction = Vector2(0, -1)
+spread = 10.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 35.0
+scale_amount_min = 0.5

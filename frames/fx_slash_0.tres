@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/fx/slash_0_0.png" id="1_mbnah"]
+[ext_resource type="Texture2D" path="res://assets/fx/slash_0_1.png" id="2_e2myy"]
+[ext_resource type="Texture2D" path="res://assets/fx/slash_0_2.png" id="3_kjacf"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mbnah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e2myy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kjacf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 14.0
+}]

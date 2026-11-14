@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_46bi5"]
+[ext_resource type="SpriteFrames" path="res://frames/limus.tres" id="2_e81rj"]
+[ext_resource type="Texture2D" path="res://assets/fx/spark.png" id="3_48l7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yecfs"]
+size = Vector2(34, 26)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_46bi5")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -11)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("2_e81rj")
+animation = &"idle"
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yecfs")
+
+[node name="Bubbles" type="CPUParticles2D" parent="."]
+position = Vector2(0, -14)
+amount = 6
+lifetime = 0.8
+texture = ExtResource("3_48l7g")
+direction = Vector2(0, -1)
+spread = 30.0
+gravity = Vector2(0, -60)
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+scale_amount_min = 0.4
+scale_amount_max = 0.7
+color = Color(0.85, 0.95, 1, 0.8)
+
+[node name="Camera" type="Camera2D" parent="."]
+position_smoothing_enabled = true

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_fejds"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="2_x8yi5"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_fejds")
+rooms = PackedStringArray("res://scenes/rooms/Room_Tutorial.tscn", "res://scenes/rooms/Room_1.tscn", "res://scenes/rooms/Room_2.tscn", "res://scenes/rooms/Room_3.tscn", "res://scenes/rooms/Room_4.tscn", "res://scenes/rooms/Room_5.tscn", "res://scenes/rooms/Room_Boss.tscn", "res://scenes/rooms/F2_Room_1.tscn", "res://scenes/rooms/F2_Room_2.tscn", "res://scenes/rooms/F2_Room_3.tscn", "res://scenes/rooms/F2_Room_4.tscn", "res://scenes/rooms/F2_Room_5.tscn", "res://scenes/rooms/F2_Boss.tscn", "res://scenes/rooms/F3_Room_1.tscn", "res://scenes/rooms/F3_Room_2.tscn", "res://scenes/rooms/F3_Room_3.tscn", "res://scenes/rooms/F3_Room_4.tscn", "res://scenes/rooms/F3_Room_5.tscn", "res://scenes/rooms/F3_Boss.tscn", "res://scenes/rooms/Final_Boss.tscn")
+room_titles = PackedStringArray("Tutorial: Containment Cell", "Room 1: Intake Vats", "Room 2: Etching Hall", "Room 3: Spitter Gallery", "Room 4: Overflow Pipes", "Room 5: Neutralizer Chamber", "BOSS: The Corrosion Core", "Room 1: Lye Intake", "Room 2: Caustic Hall", "Room 3: Alkali Gallery", "Room 4: Brine Pipes", "Room 5: pH Chamber", "BOSS: The Alkaline Tyrant", "Room 1: Boiler Intake", "Room 2: Flare Stacks", "Room 3: Cinder Gallery", "Room 4: Pressure Lines", "Room 5: Ignition Chamber", "BOSS: The Furnace Ogre", "FINAL: The Prime Catalyst")
+room_floors = PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3)
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("2_x8yi5")]
+
+[node name="Fader" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="Black" type="ColorRect" parent="Fader"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

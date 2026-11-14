@@ -1,0 +1,47 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/chars/big_demon_idle_0.png" id="1_25vbn"]
+[ext_resource type="Texture2D" path="res://assets/chars/big_demon_idle_1.png" id="2_1kdu6"]
+[ext_resource type="Texture2D" path="res://assets/chars/big_demon_idle_2.png" id="3_y5c1a"]
+[ext_resource type="Texture2D" path="res://assets/chars/big_demon_idle_3.png" id="4_olke0"]
+[ext_resource type="Texture2D" path="res://assets/chars/big_demon_run_0.png" id="5_yqo6j"]
+[ext_resource type="Texture2D" path="res://assets/chars/big_demon_run_1.png" id="6_0kh8k"]
+[ext_resource type="Texture2D" path="res://assets/chars/big_demon_run_2.png" id="7_e56mp"]
+[ext_resource type="Texture2D" path="res://assets/chars/big_demon_run_3.png" id="8_nelee"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_25vbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1kdu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y5c1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_olke0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yqo6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0kh8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e56mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nelee")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

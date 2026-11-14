@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/fx/super_ring_0.png" id="1_yxenn"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_ring_1.png" id="2_tbgri"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_ring_2.png" id="3_mkpvp"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_ring_3.png" id="4_5xtqe"]
+[ext_resource type="Texture2D" path="res://assets/fx/super_ring_4.png" id="5_3pxe3"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yxenn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tbgri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mkpvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5xtqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3pxe3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]

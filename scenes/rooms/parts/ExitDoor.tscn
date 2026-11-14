@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_3ucto"]
+[ext_resource type="Texture2D" path="res://assets/lab/hospital2.png" id="2_ab0ao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ba617"]
+size = Vector2(28, 40)
+
+[node name="ExitDoor" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_3ucto")
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ab0ao")
+region_enabled = true
+region_rect = Rect2(176, 32, 16, 16)
+
+[node name="Header" type="Sprite2D" parent="."]
+position = Vector2(0, -48)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ab0ao")
+region_enabled = true
+region_rect = Rect2(176, 0, 16, 16)
+
+[node name="Shutter" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ab0ao")
+region_enabled = true
+region_rect = Rect2(80, 16, 16, 16)
+
+[node name="Lamp" type="Sprite2D" parent="."]
+position = Vector2(0, -70)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ab0ao")
+region_enabled = true
+region_rect = Rect2(176, 64, 16, 16)
+
+[node name="Arrow" type="Label" parent="."]
+offset_left = -40.0
+offset_top = -92.0
+offset_right = -40.0
+offset_bottom = -92.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.6, 1, 0.6, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "EXIT →"
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_ba617")

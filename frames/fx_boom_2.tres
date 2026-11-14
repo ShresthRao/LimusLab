@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/fx/boom_2_0.png" id="1_4etea"]
+[ext_resource type="Texture2D" path="res://assets/fx/boom_2_1.png" id="2_sfg3y"]
+[ext_resource type="Texture2D" path="res://assets/fx/boom_2_2.png" id="3_frwhy"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4etea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sfg3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_frwhy")
+}],
+"loop": false,
+"name": &"default",
+"speed": 14.0
+}]

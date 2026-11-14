@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/pickup.gd" id="1_f6a47"]
+[ext_resource type="Texture2D" path="res://assets/icons/acid_gel.png" id="2_ktweq"]
+[ext_resource type="Texture2D" path="res://assets/fx/spark.png" id="3_5h46x"]
+
+[node name="Pickup" type="Node2D"]
+script = ExtResource("1_f6a47")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ktweq")
+
+[node name="Sparkle" type="CPUParticles2D" parent="."]
+amount = 4
+lifetime = 0.9
+texture = ExtResource("3_5h46x")
+emission_shape = 1
+emission_sphere_radius = 12.0
+gravity = Vector2(0, -20)
+initial_velocity_max = 8.0
+scale_amount_min = 0.3
+scale_amount_max = 0.6

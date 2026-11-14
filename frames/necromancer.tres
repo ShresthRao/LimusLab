@@ -1,0 +1,47 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/chars/necromancer_idle_0.png" id="1_atnur"]
+[ext_resource type="Texture2D" path="res://assets/chars/necromancer_idle_1.png" id="2_cq2qs"]
+[ext_resource type="Texture2D" path="res://assets/chars/necromancer_idle_2.png" id="3_ae7lq"]
+[ext_resource type="Texture2D" path="res://assets/chars/necromancer_idle_3.png" id="4_3v1l6"]
+[ext_resource type="Texture2D" path="res://assets/chars/necromancer_run_0.png" id="5_lk2kb"]
+[ext_resource type="Texture2D" path="res://assets/chars/necromancer_run_1.png" id="6_ql7df"]
+[ext_resource type="Texture2D" path="res://assets/chars/necromancer_run_2.png" id="7_by2am"]
+[ext_resource type="Texture2D" path="res://assets/chars/necromancer_run_3.png" id="8_odi2o"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_atnur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cq2qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ae7lq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3v1l6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lk2kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ql7df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_by2am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_odi2o")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

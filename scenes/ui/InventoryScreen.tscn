@@ -1,0 +1,715 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/inventory.gd" id="1_xthg8"]
+[ext_resource type="Texture2D" path="res://assets/nature/background_0.png" id="2_tteyc"]
+[ext_resource type="Texture2D" path="res://assets/nature/tileset.png" id="3_kfw8e"]
+[ext_resource type="Texture2D" path="res://assets/ui/frame.png" id="4_0v3ch"]
+[ext_resource type="Texture2D" path="res://assets/icons/slash.png" id="5_btuns"]
+[ext_resource type="Texture2D" path="res://assets/icons/bubble.png" id="6_s7lav"]
+[ext_resource type="Texture2D" path="res://assets/icons/dash.png" id="7_qlskq"]
+[ext_resource type="Texture2D" path="res://assets/icons/heal.png" id="8_53wn2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/Slot.tscn" id="9_tiux7"]
+
+[node name="InventoryScreen" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_xthg8")
+
+[node name="Scenery" type="Node2D" parent="."]
+scale = Vector2(4.44444, 4.44444)
+
+[node name="Sky" type="Sprite2D" parent="Scenery"]
+texture = ExtResource("2_tteyc")
+centered = false
+
+[node name="Vines" type="Node2D" parent="Scenery"]
+
+[node name="Vine1" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(-2, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 31, 16, 34)
+
+[node name="Vine2" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(22, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 31, 16, 18)
+
+[node name="Vine3" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(44, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 31, 16, 46)
+
+[node name="Vine4" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(60, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 31, 16, 34)
+
+[node name="Vine5" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(86, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 31, 16, 18)
+
+[node name="Vine6" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(120, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 31, 16, 46)
+
+[node name="Vine7" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(150, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 31, 16, 34)
+
+[node name="Vine8" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(178, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 31, 16, 18)
+
+[node name="Vine9" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(236, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 31, 16, 46)
+
+[node name="Vine10" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(258, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 31, 16, 34)
+
+[node name="Vine11" type="Sprite2D" parent="Scenery/Vines"]
+position = Vector2(276, -1)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 31, 16, 18)
+
+[node name="TreeLeft" type="Sprite2D" parent="Scenery"]
+position = Vector2(-18, 64)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(2, 78, 58, 68)
+
+[node name="TreeRight" type="Sprite2D" parent="Scenery"]
+position = Vector2(214, -6)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(172, 8, 112, 138)
+
+[node name="Ground" type="Sprite2D" parent="Scenery"]
+position = Vector2(0, 122)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 136, 288, 40)
+
+[node name="GroundFill" type="Sprite2D" parent="Scenery"]
+position = Vector2(160, 146)
+texture = ExtResource("3_kfw8e")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 160, 128, 16)
+
+[node name="Kit" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Frame" type="NinePatchRect" parent="Kit"]
+self_modulate = Color(1, 1, 1, 0.94)
+layout_mode = 0
+offset_left = 185.0
+offset_top = 16.0
+offset_right = 560.0
+offset_bottom = 278.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_0v3ch")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 14
+
+[node name="Title" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 26.0
+offset_right = 205.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.7, 1, 0.45, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "LAB KIT"
+
+[node name="Hint" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 36.0
+offset_right = 340.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Drag into the BUILD · drag back or right-click to remove · TAB to close"
+
+[node name="AbilitiesTitle" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 82.0
+offset_right = 205.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.7, 1, 0.45, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "ABILITIES"
+
+[node name="Abilities" type="Control" parent="Kit"]
+anchors_preset = 0
+
+[node name="Ability0" type="Control" parent="Kit/Abilities"]
+anchors_preset = 0
+offset_left = 205.0
+offset_top = 104.0
+offset_right = 205.0
+offset_bottom = 104.0
+mouse_filter = 2
+
+[node name="Frame" type="NinePatchRect" parent="Kit/Abilities/Ability0"]
+layout_mode = 0
+offset_right = 107.5
+offset_bottom = 31.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_0v3ch")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 14
+
+[node name="Icon" type="TextureRect" parent="Kit/Abilities/Ability0"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 50.0
+texture = ExtResource("5_btuns")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Kit/Abilities/Ability0"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 6.0
+offset_right = 54.0
+offset_bottom = 6.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Slash  [LMB / J]"
+
+[node name="Stats" type="Label" parent="Kit/Abilities/Ability0"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 26.0
+offset_right = 210.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+
+[node name="Ability1" type="Control" parent="Kit/Abilities"]
+anchors_preset = 0
+offset_left = 205.0
+offset_top = 172.0
+offset_right = 205.0
+offset_bottom = 172.0
+mouse_filter = 2
+
+[node name="Frame" type="NinePatchRect" parent="Kit/Abilities/Ability1"]
+layout_mode = 0
+offset_right = 107.5
+offset_bottom = 31.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_0v3ch")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 14
+
+[node name="Icon" type="TextureRect" parent="Kit/Abilities/Ability1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 50.0
+texture = ExtResource("6_s7lav")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Kit/Abilities/Ability1"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 6.0
+offset_right = 54.0
+offset_bottom = 6.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Slime Bubble  [RMB / K]"
+
+[node name="Stats" type="Label" parent="Kit/Abilities/Ability1"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 26.0
+offset_right = 210.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+
+[node name="Ability2" type="Control" parent="Kit/Abilities"]
+anchors_preset = 0
+offset_left = 205.0
+offset_top = 240.0
+offset_right = 205.0
+offset_bottom = 240.0
+mouse_filter = 2
+
+[node name="Frame" type="NinePatchRect" parent="Kit/Abilities/Ability2"]
+layout_mode = 0
+offset_right = 107.5
+offset_bottom = 31.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_0v3ch")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 14
+
+[node name="Icon" type="TextureRect" parent="Kit/Abilities/Ability2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 50.0
+texture = ExtResource("7_qlskq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Kit/Abilities/Ability2"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 6.0
+offset_right = 54.0
+offset_bottom = 6.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Dash  [Shift]"
+
+[node name="Stats" type="Label" parent="Kit/Abilities/Ability2"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 26.0
+offset_right = 210.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+
+[node name="Ability3" type="Control" parent="Kit/Abilities"]
+anchors_preset = 0
+offset_left = 205.0
+offset_top = 308.0
+offset_right = 205.0
+offset_bottom = 308.0
+mouse_filter = 2
+
+[node name="Frame" type="NinePatchRect" parent="Kit/Abilities/Ability3"]
+layout_mode = 0
+offset_right = 107.5
+offset_bottom = 31.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_0v3ch")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 14
+
+[node name="Icon" type="TextureRect" parent="Kit/Abilities/Ability3"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 50.0
+texture = ExtResource("8_53wn2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Kit/Abilities/Ability3"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 6.0
+offset_right = 54.0
+offset_bottom = 6.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Absorb Loot"
+
+[node name="Stats" type="Label" parent="Kit/Abilities/Ability3"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 26.0
+offset_right = 210.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+
+[node name="Info" type="Control" parent="Kit"]
+anchors_preset = 0
+offset_left = 205.0
+offset_top = 380.0
+offset_right = 420.0
+offset_bottom = 530.0
+pivot_offset = Vector2(107, 75)
+mouse_filter = 2
+
+[node name="Frame" type="NinePatchRect" parent="Kit/Info"]
+self_modulate = Color(0.85, 1.15, 0.8, 1)
+layout_mode = 0
+offset_right = 107.5
+offset_bottom = 75.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_0v3ch")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 14
+
+[node name="Icon" type="TextureRect" parent="Kit/Info"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 58.0
+offset_bottom = 58.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Kind" type="Label" parent="Kit/Info"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 10.0
+offset_right = 66.0
+offset_bottom = 10.0
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.7, 1, 0.45, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+
+[node name="Title" type="Label" parent="Kit/Info"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 26.0
+offset_right = 66.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+
+[node name="Body" type="Label" parent="Kit/Info"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 64.0
+offset_right = 206.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+
+[node name="BuildTitle" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 82.0
+offset_right = 440.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.7, 1, 0.45, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "BUILD"
+
+[node name="BuildLabels" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 104.0
+offset_right = 440.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "Chemical      Catalyst       Reagents (slime materials)"
+
+[node name="Build" type="Control" parent="Kit"]
+anchors_preset = 0
+
+[node name="Chem" parent="Kit/Build" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 440.0
+offset_top = 122.0
+offset_right = 504.0
+offset_bottom = 186.0
+role = "build"
+accepts = "chem"
+hint = "Chemical"
+
+[node name="Catalyst" parent="Kit/Build" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 516.0
+offset_top = 122.0
+offset_right = 580.0
+offset_bottom = 186.0
+role = "build"
+accepts = "catalyst"
+hint = "No catalyst"
+
+[node name="Reagent0" parent="Kit/Build" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 600.0
+offset_top = 122.0
+offset_right = 664.0
+offset_bottom = 186.0
+role = "build"
+hint = "Empty"
+
+[node name="Reagent1" parent="Kit/Build" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 676.0
+offset_top = 122.0
+offset_right = 740.0
+offset_bottom = 186.0
+role = "build"
+index = 1
+hint = "Empty"
+
+[node name="Reagent2" parent="Kit/Build" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 752.0
+offset_top = 122.0
+offset_right = 816.0
+offset_bottom = 186.0
+role = "build"
+index = 2
+hint = "Empty"
+
+[node name="Stats" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 836.0
+offset_top = 108.0
+offset_right = 836.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.7, 1, 0.45, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+
+[node name="MaterialsTitle" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 212.0
+offset_right = 440.0
+offset_bottom = 212.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.7, 1, 0.45, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "MATERIALS  (dropped by slimes)"
+
+[node name="Materials" type="Control" parent="Kit"]
+anchors_preset = 0
+
+[node name="acid_gel" parent="Kit/Materials" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 440.0
+offset_top = 234.0
+offset_right = 504.0
+offset_bottom = 298.0
+item_key = "acid_gel"
+
+[node name="etch_wing" parent="Kit/Materials" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 516.0
+offset_top = 234.0
+offset_right = 580.0
+offset_bottom = 298.0
+item_key = "etch_wing"
+
+[node name="vitriol_gland" parent="Kit/Materials" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 592.0
+offset_top = 234.0
+offset_right = 656.0
+offset_bottom = 298.0
+item_key = "vitriol_gland"
+
+[node name="slime_core" parent="Kit/Materials" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 668.0
+offset_top = 234.0
+offset_right = 732.0
+offset_bottom = 298.0
+item_key = "slime_core"
+
+[node name="corrosion_heart" parent="Kit/Materials" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 744.0
+offset_top = 234.0
+offset_right = 808.0
+offset_bottom = 298.0
+item_key = "corrosion_heart"
+
+[node name="CatalystsTitle" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 320.0
+offset_right = 440.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.7, 1, 0.45, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "CATALYSTS"
+
+[node name="Catalysts" type="Control" parent="Kit"]
+anchors_preset = 0
+
+[node name="C1" parent="Kit/Catalysts" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 440.0
+offset_top = 342.0
+offset_right = 504.0
+offset_bottom = 406.0
+accepts = "catalyst"
+item_key = "1"
+
+[node name="C2" parent="Kit/Catalysts" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 508.0
+offset_top = 342.0
+offset_right = 572.0
+offset_bottom = 406.0
+accepts = "catalyst"
+item_key = "2"
+
+[node name="C3" parent="Kit/Catalysts" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 576.0
+offset_top = 342.0
+offset_right = 640.0
+offset_bottom = 406.0
+accepts = "catalyst"
+item_key = "3"
+
+[node name="C4" parent="Kit/Catalysts" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 644.0
+offset_top = 342.0
+offset_right = 708.0
+offset_bottom = 406.0
+accepts = "catalyst"
+item_key = "4"
+
+[node name="C5" parent="Kit/Catalysts" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 712.0
+offset_top = 342.0
+offset_right = 776.0
+offset_bottom = 406.0
+accepts = "catalyst"
+item_key = "5"
+
+[node name="C6" parent="Kit/Catalysts" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 780.0
+offset_top = 342.0
+offset_right = 844.0
+offset_bottom = 406.0
+accepts = "catalyst"
+item_key = "6"
+
+[node name="C7" parent="Kit/Catalysts" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 848.0
+offset_top = 342.0
+offset_right = 912.0
+offset_bottom = 406.0
+accepts = "catalyst"
+item_key = "7"
+
+[node name="ChemicalsTitle" type="Label" parent="Kit"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 428.0
+offset_right = 440.0
+offset_bottom = 428.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.7, 1, 0.45, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "BASE CHEMICALS"
+
+[node name="Chemicals" type="Control" parent="Kit"]
+anchors_preset = 0
+
+[node name="H0" parent="Kit/Chemicals" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 440.0
+offset_top = 450.0
+offset_right = 504.0
+offset_bottom = 514.0
+accepts = "chem"
+item_key = "0"
+
+[node name="H1" parent="Kit/Chemicals" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 516.0
+offset_top = 450.0
+offset_right = 580.0
+offset_bottom = 514.0
+accepts = "chem"
+item_key = "1"
+
+[node name="H2" parent="Kit/Chemicals" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 592.0
+offset_top = 450.0
+offset_right = 656.0
+offset_bottom = 514.0
+accepts = "chem"
+item_key = "2"
+
+[node name="H3" parent="Kit/Chemicals" groups=["kit_slot"] instance=ExtResource("9_tiux7")]
+offset_left = 668.0
+offset_top = 450.0
+offset_right = 732.0
+offset_bottom = 514.0
+accepts = "chem"
+item_key = "3"
