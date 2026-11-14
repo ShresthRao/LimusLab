@@ -5,7 +5,7 @@ An open source slimey rogelike that involves 4 floors and monsters that need to 
 
 **Player:**
  
-The player (the slime "Limus") has 2 attacks, a slash and a throw that deals splash damage.
+The player (the slime "Limus" ; slime in latin) has 2 attacks, a slash and a throw that deals splash damage.
 
 **Game Mechanic:**
  
@@ -16,3 +16,13 @@ Certain attributes are strong against certain monsters and weak against others.
 Killed monsters drop loot and health that can be absorbed, adding to the health bar while the items go into the inventory (accessible after all monsters cleared from a room), later used to configure your 'build' or stats.
 
 <img width="638" height="361" alt="image" src="https://github.com/user-attachments/assets/3f870728-d375-4ba8-9c29-631ead61f0ba" />
+
+**Tips:**
+ 
+[Q] for super (3X health and damage) when stamina (H2) bar is full.
+ 
+[Shift] to dash
+
+[Tab] to acess inventory when no monsters remain in the room, used to customise stats and configure your build.
+
+Hint: Read the the description of items in inventory for info on stat changes it provides.
